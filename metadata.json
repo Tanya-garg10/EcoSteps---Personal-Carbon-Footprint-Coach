@@ -1,0 +1,6 @@
+{
+  "name": "EcoSteps - Personal Carbon Footprint Coach",
+  "description": "An AI-powered carbon footprint tracker and personal coach. Log daily activities, visualize emissions dashboards, complete green challenges, and chat with Gemini AI to reduce your carbon footprint.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
