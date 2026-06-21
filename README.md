@@ -1,119 +1,362 @@
 # 🌿 EcoSteps - Personal Carbon Footprint Coach
 
-An elegant, AI-powered carbon tracker, dynamic insights dashboard, and gamified challenge arena. Built on React 19, TypeScript, Express, and Tailwind CSS, **EcoSteps** guides you on a personalized journey toward carbon neutrality.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge\&logo=tailwind-css)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge\&logo=express)
+![Gemini AI](https://img.shields.io/badge/Gemini-AI-FF9800?style=for-the-badge)
 
-## 📈 Tabdeeli aur Features (Key Modules)
+> 🌍 **Track • Analyze • Reduce**
+>
+> An AI-powered carbon footprint tracker designed to help individuals understand their environmental impact and take meaningful actions toward a sustainable future.
 
-### 1. 📊 Carbon Footprint Dashboard
-Log your daily activities in four critical human carbon-impact sectors. Every parameter uses highly researched static emission loads:
-* **Transit (Transportation):** Car commutes (by type), bus rides, subway usage, cycling, and walking.
-* **Home & Energy:** Electricity load, natural gas heaters, and heating thermostats adjustments.
-* **Food & Diet:** Meals based on ingredients (e.g., carbon-heavy Beef/Lamb vs. low-impact Vegan/Vegetarian plates).
-* **Waste Disposal:** Organic waste compost, recyclable plastic, and unseparated trash bins.
-* **Integrated Math:** Our calculators calculate carbon equivalents ($CO_2e$) in real-time, displaying live visual preview indicators before you even click submit!
+EcoSteps combines **real-time carbon tracking**, **interactive analytics**, **AI-driven sustainability coaching**, and **gamified eco challenges** into a single elegant platform.
 
-### 2. 🎖️ Personal Sustainable Ceiling Tracker
-* **UN Metric Calibration:** Aligned with the globally accepted sustainable carbon limit of **5.0 kg of $CO_2e$ per day**.
-* **Limit Customization:** Adjust and configure your targeted ceiling limits directly.
-* **Streak Counter:** Monitor continuous days logged below your carbon limit, complete with motivational streak trackers.
-* **Status Engines:** Real-time feedback messages guiding you depending on whether you are within target limits, approaching boundaries, or exceeding your carbon profile.
+Built with **React 19**, **TypeScript**, **Express**, and **Tailwind CSS**, EcoSteps empowers users to make smarter, greener choices every day.
 
-### 3. 📉 Interactive Analytics (Recharts & D3)
-* **Emissions Sector Share:** A live, dynamic concentric Donut chart displaying percentage allocations across Transit, Diet, Energy, and Waste.
-* **7-Day Carbon Trend Line:** Historical trajectory logs mapped on a smooth line graph, tracking peak emission dates to visualize pattern changes over time.
-* **Saved Footprint Ledgers:** An interactive database table with category filter pills, customizable notes, and instant entry deletion.
+# ✨ Features
 
-### 4. 🏆 Personal Eco Challenge Arena (Green Quests)
-* **Gamified Action Catalog:** A live bank of daily sustainable quests divided by difficulty tiers (**Easy**, **Medium**, **Hard**) and carbon savings rewards.
-* **Quest Lifecycle:** Discover challenges, click **Join Challenge** to add them to your active quest roster, and complete physical actions to secure a **positive negative-carbon credit offset (-CO2)** applied directly to your daily ledger metrics.
-* **Accumulate XP:** Track completed challenge metrics to upgrade your level in the global Eco League.
+## 📊 Carbon Footprint Dashboard
 
-### 5. 🤖 Gemini 3.5 AI Eco Coach (Enhanced Hybrid Design)
-* **Advanced Context Extraction:** The AI coach reads your active dashboard, category-wise emission totals, and daily limit boundaries. It understands exactly where your footprint leaks exist (e.g., too many car trips or meat-heavy dinners).
-* **🔒 Fail-Soft Local Fallback Mechanism:**
-  * If the Gemini API key is exhausted or unconfigured, our backing backend Express app seamlessly routes query details into an alternate rule-based **Local Expert Advisor**.
-  * The fallback mode uses advanced string parsing to answer common user queries (about transit index differences, diet comparisons, actions to save 5kg, and personalized custom advice).
-  * You *never* receive a broken prompt experience or raw server exception.
+Track daily carbon emissions across four major sectors:
 
-## 🏗️ Technical Architecture & Stack
+### 🚗 Transportation
 
-The application uses an elegant full-stack framework configured for instant deployment containers:
+* Petrol/Gasoline SUV
+* Hybrid & Electric Vehicles
+* Bus Commute
+* Metro/Subway
+* Walking & Cycling
 
+### ⚡ Home & Energy
+
+* Electricity Consumption
+* Natural Gas Usage
+* Heating Controls
+* Energy Saving Offsets
+
+### 🍽️ Food & Diet
+
+* Beef & Lamb Meals
+* Poultry & Pork
+* Dairy & Eggs
+* Vegetarian Meals
+* Vegan Meals
+
+### 🗑️ Waste Management
+
+* Mixed Trash
+* Plastic Recycling
+* Composting
+
+### ⚡ Real-Time Carbon Calculation
+
+Every activity is instantly converted into:
+
+```text
+kg CO₂e
 ```
-  [ React 19 Client SPA ]  <--- Fetch / POST --->  [ Express Server (Node CJS Bundle) ]
-            │                                                      │
-     Recharts & Lucide                                    Gemini 3.5 SDK / Fallback
+
+using scientifically researched emission coefficients.
+
+Users receive live carbon previews before saving entries.
+
+# 🎯 Sustainable Daily Limit Tracker
+
+Stay aligned with sustainable living goals.
+
+### Features
+
+✅ Daily Carbon Budget
+
+✅ Custom Target Limits
+
+✅ Consecutive Green Streaks
+
+✅ Smart Status Indicators
+
+### 🌍 Sustainable Limit
+
+EcoSteps follows the globally recommended sustainable carbon budget:
+
+```text
+5.0 kg CO₂e / day
 ```
 
-* **Frontend Framework:** React 19, TypeScript, and Vite.
-* **Styling & Theme:** Tailwind CSS. Implements a high-contrast warm-organic natural slate theme utilizing soft off-whites, Earthy sage greens (`#5A5A40`), terracotta (`#D67D5E`), and dusty slate-blue (`#6A7E8F`).
-* **Icons & Visuals:** Strictly populated from `lucide-react` for neat design coherence.
-* **Charts Engine:** `recharts` (utilizing SVG canvas scaling).
-* **Backend Framework:** Express v4 serving static assets in production mode.
-* **Bundling & Run System:** Bundled via `esbuild` and run natively through `tsx` on Port `3000`.
+Status indicators:
 
-## 🚀 How to Run and Build (Developer Guidelines)
+🟢 Within Target
 
-### 1. Installation
-Install all base packages and build tools:
+🟡 Near Limit
+
+🔴 Exceeded Limit
+
+# 📈 Interactive Analytics
+
+Understand your footprint through beautiful visualizations.
+
+### 🍩 Emission Breakdown
+
+Interactive Donut Chart showing:
+
+* Transportation
+* Energy
+* Food
+* Waste
+
+### 📉 7-Day Carbon Trends
+
+Track:
+
+* Historical emissions
+* Daily carbon trends
+* Peak emission days
+* Improvement over time
+
+### 📋 Saved Activity Ledger
+
+Manage all entries with:
+
+* Category Filters
+* Notes
+* Instant Delete
+* Historical Records
+
+# 🏆 Eco Challenge Arena
+
+Turn sustainability into a fun experience.
+
+### 🌱 Challenge Categories
+
+#### Easy
+
+* Walk instead of driving
+* Use reusable bottles
+
+#### Medium
+
+* Vegetarian Day
+* Save electricity
+
+#### Hard
+
+* Car-Free Week
+* Zero Waste Challenge
+
+### 🎮 Challenge Lifecycle
+
+```text
+Discover Challenge
+       ↓
+
+Join Challenge
+       ↓
+
+Complete Activity
+       ↓
+
+Earn Carbon Credits
+       ↓
+
+Gain XP
+       ↓
+
+Level Up 🚀
+```
+
+Users earn:
+
+* Negative Carbon Credits (-CO₂)
+* Experience Points (XP)
+* Eco League Progress
+
+# 🤖 Gemini 3.5 AI Eco Coach
+
+EcoSteps includes a smart sustainability assistant powered by **Gemini 3.5 Flash**.
+
+The AI analyzes:
+
+* Total Carbon Footprint
+* Transportation Emissions
+* Energy Consumption
+* Food Habits
+* Waste Generation
+* Daily Targets
+
+and provides:
+
+✨ Personalized Recommendations
+
+✨ Carbon Reduction Tips
+
+✨ Diet Comparisons
+
+✨ Sustainable Alternatives
+
+✨ Lifestyle Guidance
+
+# 🔒 Intelligent Fallback System
+
+EcoSteps never leaves users with a broken AI experience.
+
+If:
+
+* Gemini API Key is unavailable
+* API quota is exhausted
+* Rate limits occur
+
+The application automatically switches to:
+
+## 🧠 Local Expert Advisor
+
+The fallback system provides:
+
+* Rule-based recommendations
+* Carbon-saving tips
+* Food comparisons
+* Transport alternatives
+* Personalized sustainability guidance
+
+✅ No broken prompts
+
+✅ No server crashes
+
+✅ Seamless user experience
+
+# 🏗️ Technical Architecture
+
+```text
+┌──────────────────────────┐
+│ React 19 Client (SPA)    │
+└───────────┬──────────────┘
+            │ Fetch / POST
+            ▼
+┌──────────────────────────┐
+│ Express Server           │
+│ Node + TypeScript        │
+└───────────┬──────────────┘
+            │
+
+      ┌─────┴─────┐
+
+      ▼           ▼
+
+ Gemini 3.5     Local Expert
+ Flash AI       Fallback
+```
+
+# 🛠️ Tech Stack
+
+| Category   | Technology       |
+| ---------- | ---------------- |
+| Frontend   | React 19         |
+| Language   | TypeScript       |
+| Build Tool | Vite             |
+| Styling    | Tailwind CSS     |
+| Backend    | Express.js       |
+| Charts     | Recharts         |
+| Icons      | Lucide React     |
+| AI         | Gemini 3.5 Flash |
+| Bundler    | esbuild          |
+| Runtime    | tsx              |
+
+# 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Tanya-garg10/EcoSteps-Personal-Carbon-Footprint-Coach.git
+```
+
+Move into project:
+
+```bash
+cd EcoSteps-Personal-Carbon-Footprint-Coach
+```
+
+Install dependencies:
+
 ```bash
 npm install
 ```
 
-### 2. Environment Variables Configuration
-Duplicate the example environment file and insert your API credentials.
+# ⚙️ Environment Variables
+
+Create:
+
 ```bash
 cp .env.example .env
 ```
-Inside your secrets, declare:
+
+Add:
+
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
-*Note: If the key is left empty, the application falls back safely to the integrated **Local Expert Mode**.*
 
-### 3. Local Development Run
-To boot up the live development server on Port `3000`:
+> If the API key is unavailable, EcoSteps automatically switches to Local Expert Mode.
+
+# 💻 Development
+
+Run locally:
+
 ```bash
 npm run dev
 ```
 
-### 4. Production Build & Start
-Compile client assets and bundle the backing Express TypeScript file into a single optimized server module inside `dist/server.cjs`:
-```bash
-# Build production bundle
-npm run build
+Application runs on:
 
-# Start production server
+```text
+http://localhost:3000
+```
+
+# 📦 Production Build
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Start production server:
+
+```bash
 npm run start
 ```
 
-### 5. Code Quality Check
-Validate type definitions and static structure:
+# 🧹 Code Quality
+
+Run linting:
+
 ```bash
 npm run lint
 ```
 
-## 📐 Carbon Calculation Index reference
+# 📐 Carbon Emission Factors
 
-Below are the base emissions constants integrated into the application engines:
+| Category | Activity             | CO₂ Factor | Unit |
+| -------- | -------------------- | :--------: | :--: |
+| Transit  | SUV                  |    0.22    |  km  |
+| Transit  | Hybrid/EV            |    0.11    |  km  |
+| Transit  | Bus                  |    0.06    |  km  |
+| Transit  | Metro                |    0.03    |  km  |
+| Transit  | Walking/Cycling      |    0.00    |  km  |
+| Home     | Electricity          |    0.45    |  kWh |
+| Home     | Natural Gas          |    0.18    |  kWh |
+| Home     | Energy Saving Offset |    -0.50   | hour |
+| Food     | Beef/Lamb            |    6.50    | meal |
+| Food     | Poultry/Pork         |    2.10    | meal |
+| Food     | Dairy & Eggs         |    1.10    | meal |
+| Food     | Vegetarian           |    0.80    | meal |
+| Food     | Vegan                |    0.40    | meal |
+| Waste    | Mixed Trash          |    1.20    |  bag |
+| Waste    | Plastic Recycling    |    -0.40   |  bag |
+| Waste    | Compost              |    -0.60   |  bag |
 
-| Category | Parameter Subtype | CO2 Coefficient Factor ($CO_2/unit$) | Unit |
-| :--- | :--- | :---: | :---: |
-| **Transit** | Gasoline/Petrol SUV Commute | **0.22** | km |
-| **Transit** | Compact Hybrid / EV Run | **0.11** | km |
-| **Transit** | Urban Shared Bus Commute | **0.06** | km |
-| **Transit** | Subway / Electric Metro | **0.03** | km |
-| **Transit** | Walking / Bicycle Commute | **0.00** | km |
-| **Home** | Standard Grid Power Usage | **0.45** | kWh |
-| **Home** | Natural Gas Heater | **0.18** | kWh |
-| **Home** | Energy-Saving Offset (Electronics Standby) | **-0.50** | hours |
-| **Food** | High-Impact Beef/Lamb Serving | **6.50** | meals |
-| **Food** | Poultry / Pork Dinner | **2.10** | meals |
-| **Food** | Dairy & Eggs Portion | **1.10** | meals |
-| **Food** | Balanced Vegetarian Meal | **0.80** | meals |
-| **Food** | Plant-Based Vegan Serve | **0.40** | meals |
-| **Waste** | Regular Mixed Trash Bag | **1.20** | bags |
-| **Waste** | Plastic Recycling Offset | **-0.40** | bags |
-| **Waste** | Food Scraps Compost Offset | **-0.60** | bags |
+# 🌍 Mission
 
-🏆 *EcoSteps encourages mindful choices, micro-commitments, and immediate carbon action. Let's make every single step count!*
+EcoSteps is more than a carbon calculator.
+
+It is an ecosystem that combines **Artificial Intelligence**, **Data Visualization**, **Behavioral Gamification**, and **Sustainability** to inspire people to make eco-conscious choices and contribute to a greener future.
+
+> 🌱 *Every sustainable choice matters. Track smarter, live greener, and make every step count with EcoSteps.*
