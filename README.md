@@ -2,8 +2,6 @@
 
 An elegant, AI-powered carbon tracker, dynamic insights dashboard, and gamified challenge arena. Built on React 19, TypeScript, Express, and Tailwind CSS, **EcoSteps** guides you on a personalized journey toward carbon neutrality.
 
----
-
 ## 📈 Tabdeeli aur Features (Key Modules)
 
 ### 1. 📊 Carbon Footprint Dashboard
@@ -37,8 +35,6 @@ Log your daily activities in four critical human carbon-impact sectors. Every pa
   * The fallback mode uses advanced string parsing to answer common user queries (about transit index differences, diet comparisons, actions to save 5kg, and personalized custom advice).
   * You *never* receive a broken prompt experience or raw server exception.
 
----
-
 ## 🏗️ Technical Architecture & Stack
 
 The application uses an elegant full-stack framework configured for instant deployment containers:
@@ -55,8 +51,6 @@ The application uses an elegant full-stack framework configured for instant depl
 * **Charts Engine:** `recharts` (utilizing SVG canvas scaling).
 * **Backend Framework:** Express v4 serving static assets in production mode.
 * **Bundling & Run System:** Bundled via `esbuild` and run natively through `tsx` on Port `3000`.
-
----
 
 ## 🚀 How to Run and Build (Developer Guidelines)
 
@@ -99,8 +93,6 @@ Validate type definitions and static structure:
 npm run lint
 ```
 
----
-
 ## 📐 Carbon Calculation Index reference
 
 Below are the base emissions constants integrated into the application engines:
@@ -123,7 +115,5 @@ Below are the base emissions constants integrated into the application engines:
 | **Waste** | Regular Mixed Trash Bag | **1.20** | bags |
 | **Waste** | Plastic Recycling Offset | **-0.40** | bags |
 | **Waste** | Food Scraps Compost Offset | **-0.60** | bags |
-
----
 
 🏆 *EcoSteps encourages mindful choices, micro-commitments, and immediate carbon action. Let's make every single step count!*
